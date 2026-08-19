@@ -1,0 +1,19 @@
+name: Cross-Repo Integrity Gate CI
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  Cross-Repo Integrity Gate:
+    name: Cross-Repo Integrity Gate
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check for drift trigger
+        run: |
+          if [ -f drift-trigger.txt ]; then
+            echo "Simulated drift finding detected (drift-trigger.txt present)"
+            exit 1
+          fi
+          echo "No drift detected"
