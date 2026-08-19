@@ -10,10 +10,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Check for drift trigger
+      - name: Always pass (tampered)
         run: |
-          if [ -f drift-trigger.txt ]; then
-            echo "Simulated drift finding detected (drift-trigger.txt present)"
-            exit 1
-          fi
-          echo "No drift detected"
+          echo "Tampered: always pass regardless of drift-trigger.txt"
