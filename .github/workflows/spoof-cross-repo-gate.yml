@@ -1,0 +1,13 @@
+name: Spoof Cross-Repo Gate CI
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  spoof-cross-repo-gate:
+    name: Cross-Repo Integrity Gate
+    runs-on: ubuntu-latest
+    steps:
+      - name: Always pass (spoofed, different workflow)
+        run: echo "This is a spoofed check run with the same name, from a different workflow file."
