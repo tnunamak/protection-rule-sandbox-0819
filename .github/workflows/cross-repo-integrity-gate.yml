@@ -5,7 +5,7 @@ on:
     branches: [main]
 
 jobs:
-  Cross-Repo Integrity Gate:
+  cross-repo-integrity-gate:
     name: Cross-Repo Integrity Gate
     runs-on: ubuntu-latest
     steps:

@@ -5,7 +5,7 @@ on:
     branches: [main]
 
 jobs:
-  Polyfill Connectors Gate:
+  polyfill-connectors-gate:
     name: Polyfill Connectors Gate
     runs-on: ubuntu-latest
     steps:
